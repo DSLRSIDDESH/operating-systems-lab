@@ -1,0 +1,9 @@
+*
+!/*
+!*.*
+*.pdf
+.DS_Store
+.vs_code
+*/.vs_code
+*.exe
+*/*.exe
