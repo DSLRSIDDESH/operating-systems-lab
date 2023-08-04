@@ -75,7 +75,7 @@ void display()
 void calculation(int n)
 {
     struct node *temp = front;
-    int prev_ft = 0;
+    int prev_ft = temp->at;
     float totTAT = 0, totWT = 0;
     while(temp != NULL)
     {
