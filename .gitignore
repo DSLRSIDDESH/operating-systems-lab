@@ -3,7 +3,9 @@
 !*.*
 *.pdf
 .DS_Store
-.vs_code
+.vscode
 */.vs_code
 *.exe
 */*.exe
+*/.cph
+*/*.out
