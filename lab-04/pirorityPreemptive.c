@@ -1,4 +1,13 @@
+// CS21B2019 DEVARAKONDA SLR SIDDESH
+
 // Priority Algorithm for Preemptive Scheduling
+// 1. Implement a preemptive priority scheduling approach.
+// (i) Provide the input as P_id, arrival time (all are arriving at a different time), priority of each process, and burst time.
+// (ii) Show the Completion time, turnaround time, waiting time, and response time for each process.
+// (iii) Compute average turnaround time, waiting time, and response time.
+// (iv) Print the schedule for the given input.
+// Note: You can use only integers for process id. Use the array implementation (dynamically using malloc()) for the Queue. At the end of the program remove the queue from the memory.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -84,9 +93,9 @@ void createReadyQueue(struct process *readyQueue, struct process *p, int n)
                 p[i].started = 1;
             }
         }
-        if(front <=rear && front != -1)
+        if(front <=rear && front != -1) // if queue is not empty
         {
-            if(readyQueue[front].run_time == readyQueue[front].bt)
+            if(readyQueue[front].run_time == readyQueue[front].bt) // if process is completed
             {
                 readyQueue[front].ft = curr_time;
                 int pos = findIndex(readyQueue[front].pid, p, n);
@@ -95,7 +104,7 @@ void createReadyQueue(struct process *readyQueue, struct process *p, int n)
             }
             else
             {
-                if(readyQueue[front].run_time == 0)
+                if(readyQueue[front].run_time == 0) // if process is starting
                     readyQueue[front].rt = curr_time - readyQueue[front].at;
                 readyQueue[front].run_time++;
                 curr_time++;

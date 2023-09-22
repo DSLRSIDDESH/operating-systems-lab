@@ -1,4 +1,13 @@
 // Round Robin Algorithm for Preemptive Scheduling
+
+//  Write a C program to implement round-robin scheduling.
+// (i)Take input from the user as P_id, arrival time, burst Time, and time quantum.
+// (ii) Show the turnaround time, waiting time, and response time for each task.
+// (iii) Compute average turnaround time, waiting time, and response time.
+// (iv) Count the number of context switches (excluding the count at the beginning of the first execution process and the end of the last execution process)
+// (v) Your algorithm should work for both the scenario: (a) all tasks arrive at the same time (b) tasks may arrive at a different time
+// Note: You can use only integers for process id. Use the array implementation(dynamically using malloc) for the Queue. At the end of the program remove the queue from the memory.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -126,7 +135,7 @@ int main()
 
     for(int i = 0; i < n; i++)
     {
-        int at, bt, priority;
+        int at, bt;
         p[i].pid = pid;
         printf("For Process-%d : \n", pid++);
 

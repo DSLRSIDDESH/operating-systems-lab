@@ -1,5 +1,4 @@
 // #include <unistd.h>
-
 // int main(void) {
 //     char *file = "/bin/echo";
 //     char *arg1 = "Hello world!";
@@ -10,17 +9,16 @@
 // }
 
 // #include <unistd.h>
-
 // int main(void) {
-//     char *file = "echo";
-//     char *arg1 = "Hello world!";
+//     char *file = "/bin/echo";
+//     char *const args[] = {"/bin/echo", "Hello world!", NULL};
+	
+//     execv(file, args);
 
-//     execlp(file, file, arg1, NULL);
 //     return 0;
 // }
 
 // #include <unistd.h>
-
 // int main(void) {
 //     char *file = "/bin/bash";
 //     char *arg1 = "-c";
@@ -33,35 +31,31 @@
 // }
 
 // #include <unistd.h>
-
-// int main(void) {
-//     char *file = "/bin/echo";
-//     char *const args[] = {"/bin/echo", "Hello world!", NULL};
-	
-//     execv(file, args);
-
-//     return 0;
-// }
-
-// #include <unistd.h>
-
-// int main(void) {
-//     char *file = "echo";
-//     char *const args[] = {"/bin/echo", "Hello world!", NULL};
-	
-//     execvp(file, args);
-
-//     return 0;
-// }
-
-// #include <unistd.h>
-
 // int main(void) {
 //     char *file = "/bin/bash";
 //     char *const args[] = {"/bin/bash", "-c", "echo Hello $ENV!", NULL};
 //     char *const env[] = {"ENV=World", NULL};
 	
 //     execve(file, args, env);
+
+//     return 0;
+// }
+
+// #include <unistd.h>
+// int main(void) {
+//     char *file = "echo";
+//     char *arg1 = "Hello world!";
+
+//     execlp(file, file, arg1, NULL);
+//     return 0;
+// }
+
+// #include <unistd.h>
+// int main(void) {
+//     char *file = "echo";
+//     char *const args[] = {"/bin/echo", "Hello world!", NULL};
+	
+//     execvp(file, args);
 
 //     return 0;
 // }

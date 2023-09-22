@@ -1,4 +1,13 @@
 //CS21B2019 DSLR SIDDESH
+
+// Write a C program to implement First Come First Serve CPU Scheduling Algorithm.
+// (i) Take input from the user only once (Process_id, Arrival Time, Burst Time) and apply FCFS.
+// (ii) Your algorithm should work for both scenario: (a) all tasks arrive at the same time (b) tasks may arrive at a different time.
+// (iii) Compute completion time, turnaround time,  waiting time and response time for each process  for the given input.
+// (iv) Further compute the average waiting time and average turnaround time.
+// (v) Print the schedule for the given input.
+// Note: You can use only integers for process id. Use the linked list implementation for the Queue.
+
 #include <stdio.h>
 #include <stdlib.h>
 

@@ -1,5 +1,13 @@
 // Roll: CS21B2019
 // Name: Devarakonda SLR Siddesh
+
+// Write two different programs (Sender and Receiver) in C to demonstrate IPC using message queue. 
+// Process "Sender.c" will take input of atleast 10 numbers and share these numbers with the "Receiver.c" process 
+// using message queue. The "Receiver.c" will check each numbers and displays 
+// how many odd numbers are there among those numbers and displays them.  
+// NOTE- Write the program in your own/Lab unix system and after successful execution/showing to TAs. 
+// Finally, before the deadline copy-paste the corresponding Receiver.c's Code In this File
+
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
