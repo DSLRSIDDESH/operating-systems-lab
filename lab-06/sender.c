@@ -16,7 +16,6 @@
 
 int main()
 {
-    char c;
     int shmid;
     char *shm, *s;
     char *sentence = "hereisasentenceof100characterswithoutanyspacesorbreaksinbetweenitcontainslettersandnumbersandpunctuation.";

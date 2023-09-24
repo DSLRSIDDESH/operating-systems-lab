@@ -1,12 +1,10 @@
 // Roll: CS21B2019
 // Name: Devarakonda SLR Siddesh
 
-// Write two different programs (Sender and Receiver) in C to demonstrate IPC using message queue. 
-// Process "Sender.c" will take input of atleast 10 numbers and share these numbers with the "Receiver.c" process 
-// using message queue. The "Receiver.c" will check each numbers and displays 
-// how many odd numbers are there among those numbers and displays them.  
-// NOTE- Write the program in your own/Lab unix system and after successful execution/showing to TAs. 
-// Finally, before the deadline copy-paste the corresponding Receiver.c's Code In this File
+// Write two different programs (Sender and Receiver) in C to demonstrate IPC using FIFO Named Pipe. 
+// Process "Sender.c" will write one integer value (Say A) as a message in FIFO. "Receiver.c" will read that message. 
+// After reading the message, it will find the one’s complement of A and name it as B1. 
+// Then, it will write B on to the pipe. "Sender.c" will read the integer value B1 from the pipe and display it.
 
 #include <stdio.h>
 #include <fcntl.h>
@@ -42,7 +40,6 @@ int main()
 
     // Open the named pipe for reading
     fd1 = open(myfifo, O_RDONLY);
-
     // Read the 1's complement of 'a' from the named pipe
     read(fd1, &b, sizeof(b));
 
