@@ -1,14 +1,5 @@
 // CS21B2019 DEVARAKONDA SLR SIDDESH
 
-// Create parent and child processes using fork(). In each process, define an array of integer using malloc. Before that take the size of the array from the user. Insert values in your array (size and array elements may be different for both processes).
-// In Parent Process:
-// (a) Print the array elements and their addresses
-// (b) Sort the array and print its values.
-// In Child Process:
-// (a) Print the array elements and their address
-// (b) Reverse the array and print its values.
-// NOTE: Ensure that first child process should terminate, then Parent Process should start taking input.
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>

@@ -1,19 +1,8 @@
 // CS21B2019 Devarakonda SLR Siddesh
-
-// Write a C program which will create a child process from a parent process. In parent process, define one global array and take input from the user.
-// Perform following operations.
-// In Parent Process:
-// (a) Update the array by subtracting 3 from each element of the array.
-// (b) Print the elements, address of the elements and find the minimum element after performing (a).
-// (c) Print process id and it’s parent process id
-// In Child Process:
-// (a) Update the global array by adding 2 on each element of the array.
-// (b) Print the elements, address of the elements and find the maximum element after performing (a)
-// (c) Print process id and it’s parent process id
-
 #include <stdio.h>
 #include <unistd.h>     // header file for fork(), getpid(), getppid(), sleep(), etc.
 #include <sys/types.h>  // header file for data types pid_t, ssize_t, time_t, useconds_t, size_t, clock_t, etc.
+#include <sys/wait.h>   // header file for wait(), waitpid(), waitid(), etc.
 
 int findMinOrMax(int *arr, char type, int n) // function to find minimum or maximum element of array
 {
@@ -92,6 +81,7 @@ int main() {
         printf("Minimum element of array     : %d\n", findMinOrMax(arr, '<', n));
         printf("Process ID                   : %d\n", getpid());    // getpid() returns the process ID of the calling process.
         printf("Process ID of parent process : %d\n", getppid());   // getppid() returns the process ID of the parent of the calling process.
+        wait(NULL);     // wait() causes the parent process to wait for the child process to finish executing.
     }
     return 0;
 }
